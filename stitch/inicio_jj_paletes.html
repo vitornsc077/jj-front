@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JJ Comércio de Paletes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ffb599",
+                        "surface-container-high": "#fde3da",
+                        "border-subtle": "#E5E5E5",
+                        "surface-bright": "#fff8f6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-low": "#fff1ec",
+                        "on-primary-fixed": "#370e00",
+                        "on-primary-container": "#4f1800",
+                        "background": "#fff8f6",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#3c2d27",
+                        "deep-black": "#111111",
+                        "surface-container": "#ffe9e2",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary": "#a63b00",
+                        "surface-white": "#FFFFFF",
+                        "outline": "#8d7166",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "industrial-orange": "#F26522",
+                        "on-surface": "#261813",
+                        "charcoal": "#222222",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#2a2a2a",
+                        "secondary-container": "#e2dfde",
+                        "tertiary": "#5f5e5e",
+                        "secondary-fixed": "#e5e2e1",
+                        "inverse-on-surface": "#ffede7",
+                        "tertiary-container": "#939190",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface-variant": "#594138",
+                        "surface-container-highest": "#f7ddd4",
+                        "surface-dim": "#eed5cc",
+                        "primary-fixed": "#ffdbce",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb599",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#636262",
+                        "surface": "#fff8f6",
+                        "primary-container": "#f26522",
+                        "on-background": "#261813",
+                        "secondary": "#5f5e5e",
+                        "on-primary-fixed-variant": "#7f2b00",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-variant": "#f7ddd4",
+                        "outline-variant": "#e1bfb3",
+                        "surface-tint": "#a63b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-tablet": "32px",
+                        "unit": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "caption": ["Work Sans"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hero-overlay {
+            background: linear-gradient(to top, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.4) 100%);
+        }
+        .nav-shadow {
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-16 pb-20 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface-white fixed top-0 w-full z-50 border-b border-border-subtle shadow-sm flex justify-between items-center px-margin-mobile h-16 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-industrial-orange" data-weight="fill" style="font-variation-settings: 'FILL' 1;">conveyor_belt</span>
+<span class="font-headline-md text-headline-md-mobile font-bold text-industrial-orange">JJ PALETES</span>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-industrial-orange hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#">Início</a>
+<a class="text-charcoal hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#produtos">Produtos</a>
+<a class="text-charcoal hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#orcamento">Orçamento</a>
+</div>
+<button class="active:scale-95 transition-transform hover:bg-surface-container-low p-2 rounded-full">
+<span class="material-symbols-outlined text-industrial-orange">call</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden md:rounded-xl md:mt-margin-tablet">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A striking industrial hero image featuring towering stacks of wooden pallets in a modern, expansive warehouse. The lighting is dramatic, casting strong cinematic shadows that highlight the geometric patterns and sheer scale of the pallets. The overall mood is powerful, efficient, and deeply professional. The raw wood textures contrast nicely with the clean, structured environment, embodying high-capacity logistics." style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1U2O28cHanIvzDfM1gtg8nvrdPPHTqQkZgy21plhurTeQxkOwr5IXDLyaQNl3iq52yOgt5Bdf3vYumE_M-hJStapRxqoqxUJo4KWj4UJY7YkxSOB14M1RN1kIwGiFIy4gDT_7Tf1d0jBShBUTBwGnido8hsJYK3qR4rx_VjkwWjirSr4OnT_chF4TM9A8OPNqYHg_oX9v1xd8AzHSvkrySRcLhvTo9fkVuJMwnGNPWKVagmtLm0h1UDBA')"></div>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 text-center px-margin-mobile md:px-0 max-w-3xl flex flex-col items-center gap-6">
+<img alt="Logo JJ Paletes" class="w-24 h-24 rounded-full border-4 border-surface-white shadow-lg mb-4" src="https://lh3.googleusercontent.com/aida/AEtjO1XllTXE7dS-7nxgzkamUyG8whsjzPkcOjnc27Y1k74QhcZoEQnZg75AEWVBUClNoPxV2L41V3fa5-40WT7lfdqNG-NrEXcXnhrrQDigIT88FRdqOtz1JvR1cDfKb4LqINRrA8Jzf6RZ8mpK8d1UZRXWWnuWv2HDQozcMyjIt5qYoaoDve_96me1_A2L7kIzZsT9OOEcsdcSVmnIHBKY3t3aqAotlvz8JOiL3HGJtqTfGI0zstQIGAd1vUI"/>
+<h1 class="font-display-lg text-display-lg text-surface-white">Soluções Inteligentes em Paletes</h1>
+<p class="font-body-lg text-body-lg text-surface-container-highest max-w-xl mx-auto">Cabreúva e região. Soluções em pallets para empresas que buscam eficiência, economia e resultado.</p>
+<a class="inline-flex items-center gap-2 bg-industrial-orange text-surface-white font-label-bold text-label-bold px-8 py-4 rounded hover:scale-[1.02] active:scale-95 transition-all shadow-md mt-4" href="#orcamento">
+                    Solicitar Orçamento
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-16 px-margin-mobile md:px-0" id="produtos">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Serviços Especializados</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Atendemos a cadeia logística de ponta a ponta com agilidade e compromisso estrutural.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Venda -->
+<div class="bg-surface-white p-6 rounded-xl border border-border-subtle shadow-sm border-t-4 border-t-industrial-orange flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-industrial-orange">
+<span class="material-symbols-outlined text-[28px]">inventory_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Venda</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Venda de pallets diversos padrões. Estruturas revisadas para garantir a máxima segurança da sua carga.</p>
+</div>
+<!-- Compra -->
+<div class="bg-surface-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-industrial-orange">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Compra</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Compramos pallets usados. Transforme ativos parados em capital de giro para sua operação logística.</p>
+</div>
+<!-- Retirada -->
+<div class="bg-surface-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-industrial-orange">
+<span class="material-symbols-outlined text-[28px]">recycling</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Retirada</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Retirada de pallets quebrados. Solução ecológica e prática para limpar seu galpão com atendimento ágil.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-white fixed bottom-0 w-full z-50 border-t border-border-subtle nav-shadow flex justify-around items-center h-20 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-3 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-industrial-orange active:scale-90 transition-all px-3 py-1" href="#produtos">
+<span class="material-symbols-outlined mb-1">inventory_2</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Produtos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-industrial-orange active:scale-90 transition-all px-3 py-1" href="#orcamento">
+<span class="material-symbols-outlined mb-1">request_quote</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Orçamento</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-industrial-orange active:scale-90 transition-all px-3 py-1" href="https://wa.me/5511995979833">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">WhatsApp</span>
+</a>
+</nav>
+</body></html>

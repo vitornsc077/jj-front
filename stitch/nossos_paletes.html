@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JJ PALETES - Produtos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "primary-fixed-dim": "#ffb599",
+                  "surface-container-high": "#fde3da",
+                  "border-subtle": "#E5E5E5",
+                  "surface-bright": "#fff8f6",
+                  "on-tertiary": "#ffffff",
+                  "on-secondary-fixed-variant": "#474746",
+                  "surface-container-low": "#fff1ec",
+                  "on-primary-fixed": "#370e00",
+                  "on-primary-container": "#4f1800",
+                  "background": "#fff8f6",
+                  "on-secondary-fixed": "#1b1c1c",
+                  "error-container": "#ffdad6",
+                  "inverse-surface": "#3c2d27",
+                  "deep-black": "#111111",
+                  "surface-container": "#ffe9e2",
+                  "on-tertiary-fixed": "#1c1b1b",
+                  "primary": "#a63b00",
+                  "surface-white": "#FFFFFF",
+                  "outline": "#8d7166",
+                  "on-secondary": "#ffffff",
+                  "on-primary": "#ffffff",
+                  "on-error": "#ffffff",
+                  "industrial-orange": "#F26522",
+                  "on-surface": "#261813",
+                  "charcoal": "#222222",
+                  "tertiary-fixed-dim": "#c8c6c5",
+                  "tertiary-fixed": "#e5e2e1",
+                  "on-tertiary-container": "#2a2a2a",
+                  "secondary-container": "#e2dfde",
+                  "tertiary": "#5f5e5e",
+                  "secondary-fixed": "#e5e2e1",
+                  "inverse-on-surface": "#ffede7",
+                  "tertiary-container": "#939190",
+                  "error": "#ba1a1a",
+                  "secondary-fixed-dim": "#c8c6c5",
+                  "on-surface-variant": "#594138",
+                  "surface-container-highest": "#f7ddd4",
+                  "surface-dim": "#eed5cc",
+                  "primary-fixed": "#ffdbce",
+                  "on-error-container": "#93000a",
+                  "inverse-primary": "#ffb599",
+                  "surface-container-lowest": "#ffffff",
+                  "on-secondary-container": "#636262",
+                  "surface": "#fff8f6",
+                  "primary-container": "#f26522",
+                  "on-background": "#261813",
+                  "secondary": "#5f5e5e",
+                  "on-primary-fixed-variant": "#7f2b00",
+                  "on-tertiary-fixed-variant": "#474646",
+                  "surface-variant": "#f7ddd4",
+                  "outline-variant": "#e1bfb3",
+                  "surface-tint": "#a63b00"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "margin-mobile": "16px",
+                  "margin-desktop": "64px",
+                  "gutter": "24px",
+                  "margin-tablet": "32px",
+                  "unit": "8px",
+                  "container-max": "1280px"
+          },
+          "fontFamily": {
+                  "headline-lg-mobile": [
+                          "Inter"
+                  ],
+                  "label-bold": [
+                          "Inter"
+                  ],
+                  "body-lg": [
+                          "Work Sans"
+                  ],
+                  "body-md": [
+                          "Work Sans"
+                  ],
+                  "headline-lg": [
+                          "Inter"
+                  ],
+                  "display-lg": [
+                          "Inter"
+                  ],
+                  "caption": [
+                          "Work Sans"
+                  ],
+                  "headline-md": [
+                          "Inter"
+                  ]
+          },
+          "fontSize": {
+                  "headline-lg-mobile": [
+                          "28px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "label-bold": [
+                          "14px",
+                          {
+                                  "lineHeight": "1",
+                                  "letterSpacing": "0.05em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "body-lg": [
+                          "18px",
+                          {
+                                  "lineHeight": "1.6",
+                                  "fontWeight": "400"
+                          }
+                  ],
+                  "body-md": [
+                          "16px",
+                          {
+                                  "lineHeight": "1.5",
+                                  "fontWeight": "400"
+                          }
+                  ],
+                  "headline-lg": [
+                          "32px",
+                          {
+                                  "lineHeight": "1.2",
+                                  "letterSpacing": "-0.01em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "display-lg": [
+                          "48px",
+                          {
+                                  "lineHeight": "1.1",
+                                  "letterSpacing": "-0.02em",
+                                  "fontWeight": "800"
+                          }
+                  ],
+                  "caption": [
+                          "12px",
+                          {
+                                  "lineHeight": "1.4",
+                                  "fontWeight": "500"
+                          }
+                  ],
+                  "headline-md": [
+                          "24px",
+                          {
+                                  "lineHeight": "1.3",
+                                  "fontWeight": "600"
+                          }
+                  ]
+          }
+      },
+      }
+    }
+  </script>
+<style>
+    body {
+      padding-top: 4rem; /* TopAppBar height */
+      padding-bottom: 5rem; /* BottomNavBar height */
+    }
+    @media (min-width: 768px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface-white dark:bg-deep-black fixed top-0 w-full z-50 border-b border-border-subtle dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile h-16 w-full hidden md:flex">
+<div class="flex items-center gap-unit hover:bg-surface-container-low transition-colors p-2 rounded-lg cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-industrial-orange dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">conveyor_belt</span>
+<h1 class="font-headline-md text-headline-md font-bold text-industrial-orange">JJ PALETES</h1>
+</div>
+<nav class="flex gap-gutter items-center">
+<a class="font-label-bold text-label-bold text-charcoal dark:text-surface-variant hover:text-industrial-orange transition-colors" href="#">Início</a>
+<a class="font-label-bold text-label-bold text-industrial-orange border-b-2 border-industrial-orange pb-1" href="#">Produtos</a>
+<a class="font-label-bold text-label-bold text-charcoal dark:text-surface-variant hover:text-industrial-orange transition-colors" href="#">Orçamento</a>
+</nav>
+<div class="flex items-center hover:bg-surface-container-low transition-colors p-2 rounded-lg cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-charcoal dark:text-surface-variant">call</span>
+</div>
+</header>
+<!-- Mobile TopAppBar -->
+<header class="bg-surface-white dark:bg-deep-black fixed top-0 w-full z-50 border-b border-border-subtle dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile h-16 w-full md:hidden">
+<div class="flex items-center gap-unit hover:bg-surface-container-low transition-colors p-2 rounded-lg cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-industrial-orange dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">conveyor_belt</span>
+</div>
+<h1 class="font-headline-md text-headline-md-mobile font-bold text-industrial-orange">JJ PALETES</h1>
+<div class="flex items-center hover:bg-surface-container-low transition-colors p-2 rounded-lg cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-charcoal dark:text-surface-variant">call</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-margin-desktop flex flex-col gap-12">
+<!-- Header Section -->
+<section class="flex flex-col items-center text-center max-w-3xl mx-auto gap-4">
+<h2 class="font-display-lg text-display-lg text-deep-black">Nossos Paletes</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Soluções inteligentes em pallets para empresas que buscam eficiência, economia e resultado. Conheça nossa linha completa desenvolvida para suportar a carga da sua operação.</p>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: Palete PBR -->
+<article class="bg-surface-white rounded-xl shadow-sm border border-border-subtle overflow-hidden flex flex-col hover:shadow-md transition-shadow relative border-t-4 border-t-industrial-orange">
+<div class="h-64 bg-surface-container w-full relative">
+<img alt="Pilhas organizadas de paletes padrão PBR em um galpão industrial iluminado, demonstrando qualidade e padronização." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1U2O28cHanIvzDfM1gtg8nvrdPPHTqQkZgy21plhurTeQxkOwr5IXDLyaQNl3iq52yOgt5Bdf3vYumE_M-hJStapRxqoqxUJo4KWj4UJY7YkxSOB14M1RN1kIwGiFIy4gDT_7Tf1d0jBShBUTBwGnido8hsJYK3qR4rx_VjkwWjirSr4OnT_chF4TM9A8OPNqYHg_oX9v1xd8AzHSvkrySRcLhvTo9fkVuJMwnGNPWKVagmtLm0h1UDBA"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary-container font-label-bold text-label-bold px-3 py-1 rounded bg-opacity-90 backdrop-blur-sm">
+            PADRÃO PBR
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-grow gap-4">
+<h3 class="font-headline-md text-headline-md text-deep-black">Palete PBR</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">O padrão brasileiro ideal para estocagem e movimentação em porta-paletes. Alta durabilidade e capacidade de carga otimizada.</p>
+<div class="flex items-center justify-between mt-auto">
+<button class="bg-industrial-orange text-surface-white font-label-bold text-label-bold px-6 py-3 rounded hover:bg-opacity-90 transition-colors flex items-center gap-2">
+                Orçar <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="text-charcoal font-label-bold text-label-bold border-b-2 border-transparent hover:border-industrial-orange hover:text-industrial-orange transition-all py-1">
+                Ver Detalhes
+             </button>
+</div>
+</div>
+</article>
+<!-- Card 2: Palete Descartável -->
+<article class="bg-surface-white rounded-xl shadow-sm border border-border-subtle overflow-hidden flex flex-col hover:shadow-md transition-shadow relative border-t-4 border-t-tertiary-container">
+<div class="h-64 bg-surface-container w-full relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close-up em um palete de madeira clara, modelo descartável ou one-way, pronto para exportação ou uso único, com textura de madeira visível." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkGp6v5SIEFGS3t2X6ciYhNUeygG71_vXk3OX8j2YWD6idWOG6xS0fgO7oOl9Tiedn4mcLvFgvCsZk3o9geNwMOnM5deFKTLYWgUX-Fl_dfmbEcgV_1O8FJyTDVm3abdpeTR08DbIFQXj35uffL03lBrDfTREcjbJEAcf1tjF71owrNx6ZBQAh8LF64B3xHk7L7TpkhjOdHU4GOpNj8kwGO-3MeFDptBhL4vysSssekGaHYO8vy6m-')"></div>
+<div class="absolute top-4 left-4 bg-surface-container-highest text-on-surface font-label-bold text-label-bold px-3 py-1 rounded bg-opacity-90 backdrop-blur-sm">
+            ONE-WAY
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-grow gap-4">
+<h3 class="font-headline-md text-headline-md text-deep-black">Palete Descartável</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Também conhecidos como paletes One-Way. Solução econômica para envio de mercadorias sem necessidade de retorno do palete.</p>
+<div class="flex items-center justify-between mt-auto">
+<button class="bg-industrial-orange text-surface-white font-label-bold text-label-bold px-6 py-3 rounded hover:bg-opacity-90 transition-colors flex items-center gap-2">
+                Orçar <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="text-charcoal font-label-bold text-label-bold border-b-2 border-transparent hover:border-industrial-orange hover:text-industrial-orange transition-all py-1">
+                Ver Detalhes
+             </button>
+</div>
+</div>
+</article>
+<!-- Card 3: Palete Sob Medida -->
+<article class="bg-surface-white rounded-xl shadow-sm border border-border-subtle overflow-hidden flex flex-col hover:shadow-md transition-shadow relative border-t-4 border-t-deep-black">
+<div class="h-64 bg-surface-container w-full relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="Trabalhador medindo peças de madeira em uma marcenaria industrial focada em construção de paletes customizados para cargas especiais." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmJH6TgZxANAilA65F_ll_vjOe88S0kEhJj2YcFY-3DUqXovuo-wllZlnHaXIljvxnDhxlIFTJh5Xb00pgxIDdius-99MsUf6RGliGFuvaGmkmhf8Vd2GLr192CQXSv_7zJFnck4mqopUSm4pdbMOasHhKPD9Ixj-bt7S1eDl8FFGkEgLLa-BtOACXwZR-_X6PHvGigpBC1OAHUfRkg2Rqv08dYZ0jTM29rvCXYYpatQgONfTlo3Qo')"></div>
+<div class="absolute top-4 left-4 bg-deep-black text-surface-white font-label-bold text-label-bold px-3 py-1 rounded bg-opacity-90 backdrop-blur-sm">
+            CUSTOMIZADO
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-grow gap-4">
+<h3 class="font-headline-md text-headline-md text-deep-black">Paletes Sob Medida</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Projetos especiais dimensionados perfeitamente para o seu produto, garantindo segurança máxima e otimização de espaço na carga.</p>
+<div class="flex items-center justify-between mt-auto">
+<button class="bg-industrial-orange text-surface-white font-label-bold text-label-bold px-6 py-3 rounded hover:bg-opacity-90 transition-colors flex items-center gap-2">
+                Orçar <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="text-charcoal font-label-bold text-label-bold border-b-2 border-transparent hover:border-industrial-orange hover:text-industrial-orange transition-all py-1">
+                Ver Detalhes
+             </button>
+</div>
+</div>
+</article>
+</section>
+<!-- CTA Section -->
+<section class="bg-deep-black rounded-xl p-8 md:p-12 mt-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-20 pointer-events-none" style="background-image: radial-gradient(circle, #F26522 0%, transparent 70%);"></div>
+<div class="flex flex-col gap-4 z-10 max-w-2xl text-center md:text-left">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-white">Precisa de um grande volume?</h3>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim">Entre em contato para condições especiais em lotes corporativos. Atendemos empresas de toda a região com agilidade e compromisso.</p>
+</div>
+<a class="z-10 bg-industrial-orange text-surface-white font-label-bold text-label-bold px-8 py-4 rounded shadow-lg hover:scale-105 transition-transform flex items-center gap-2 whitespace-nowrap" href="https://wa.me/5511995979833">
+<span class="material-symbols-outlined">chat</span> Falar com Consultor
+        </a>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-white dark:bg-deep-black fixed bottom-0 w-full z-50 border-t border-border-subtle dark:border-outline shadow-[0_-2px_10px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-2 pb-safe w-full md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-industrial-orange active:scale-90 transition-all w-16" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-bold text-label-bold text-[10px] truncate w-full text-center">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-3 py-1 active:scale-90 transition-all w-20" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-label-bold text-label-bold text-[10px] truncate w-full text-center">Produtos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-industrial-orange active:scale-90 transition-all w-20" href="#">
+<span class="material-symbols-outlined mb-1">request_quote</span>
+<span class="font-label-bold text-label-bold text-[10px] truncate w-full text-center">Orçamento</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-industrial-orange active:scale-90 transition-all w-16" href="https://wa.me/5511995979833">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="font-label-bold text-label-bold text-[10px] truncate w-full text-center">WhatsApp</span>
+</a>
+</nav>
+</body></html>
