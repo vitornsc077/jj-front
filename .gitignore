@@ -15,6 +15,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Local MCP and Agent configurations (contain API tokens)
+# Local MCP Configurations (contain API tokens)
 .mcp.json
-.agents/
+.agents/**/mcp_config.json

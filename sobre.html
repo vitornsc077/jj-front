@@ -4,165 +4,407 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Nós | JJ Comércio de Paletes</title>
-  <meta name="description" content="Conheça a história, valores e infraestrutura da JJ Comércio de Paletes em Cabreúva - SP. Parceiro logístico de confiança para sua empresa.">
-  <link rel="icon" type="image/jpeg" href="assets/Logo_novo.png?v=2">
+  <meta name="description" content="Conheça a história, infraestrutura e valores da JJ Comércio de Paletes em Cabreúva - SP. Parceiro logístico estratégico em pallets de madeira para toda a região.">
+  <link rel="icon" type="image/png" href="assets/Logo_novo.png?v=2">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
+  <!-- Barra Superior / Top Utility Bar -->
+  <div class="top-bar" role="region" aria-label="Informações Rápidas e Contato">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-badge">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          <span>Base em Cabreúva - SP • Atendimento em Jundiaí, Itu, Salto e todo o Estado de SP</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span style="font-size: 0.76rem; color: #94A3B8; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <span class="online-pulse-dot"></span> Atendimento Online
+        </span>
+        <a href="tel:+5511995979833" class="top-bar-link" title="Ligar para Roberto Gomes">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          <span>(11) 99597-9833</span>
+        </a>
+        <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="top-bar-link" style="color: #4ADE80;" title="WhatsApp Comercial">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: #4ADE80;">chat</span>
+          <span>WhatsApp Direto</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Barra de Navegação -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
-        <img src="assets/Logo_novo.png?v=2" alt="Logo JJ Paletes">
-        <span>JJ PALETES</span>
+      <a href="index.html" class="brand-logo" aria-label="Página Inicial JJ Comércio de Paletes">
+        <img src="assets/Logo_novo.png?v=2" alt="Logotipo JJ Paletes">
+        <div class="brand-logo-text">
+          <span class="brand-name">JJ PALETES</span>
+          <span class="brand-sub">Comércio & Logística</span>
+        </div>
       </a>
 
-      <nav class="desktop-nav">
-        <a href="index.html" class="nav-link">Início</a>
-        <a href="produtos.html" class="nav-link">Produtos</a>
-        <a href="sobre.html" class="nav-link active">Sobre Nós</a>
-        <a href="orcamento.html" class="nav-link">Cotação Rápida</a>
-        <a href="gerador-orcamento.html" class="nav-link" style="color: var(--color-primary); font-weight: 700;">Emitir Orçamento (Sistema)</a>
+      <nav class="desktop-nav" role="navigation" aria-label="Navegação Principal">
+        <a href="index.html" class="nav-link">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">home</span>
+          <span>Início</span>
+        </a>
+
+        <!-- Dropdown: Nossos Paletes & Serviços -->
+        <div class="nav-dropdown">
+          <a href="produtos.html" class="nav-link nav-dropdown-toggle" id="dropdownPaletesLink" aria-haspopup="true" aria-expanded="false">
+            <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">inventory_2</span>
+            <span>Paletes & Serviços</span>
+            <span class="material-symbols-outlined dropdown-arrow" aria-hidden="true">expand_more</span>
+          </a>
+          
+          <div class="dropdown-menu" aria-labelledby="dropdownPaletesLink">
+            <a href="produtos.html#pbr" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">view_in_ar</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Palete PBR 1000x1200mm</span>
+                  <span class="dropdown-badge">Mais Vendido</span>
+                </div>
+                <span class="dropdown-item-desc">Padrão nacional regulamentado para porta-paletes.</span>
+              </div>
+            </a>
+
+            <a href="produtos.html#descartavel" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">flight_takeoff</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Palete Descartável (One-Way)</span>
+                </div>
+                <span class="dropdown-item-desc">Ideal para exportação e cargas de envio único.</span>
+              </div>
+            </a>
+
+            <a href="produtos.html#compra" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">currency_exchange</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Compra de Paletes Usados</span>
+                  <span class="dropdown-badge" style="background: var(--color-success);">Compramos</span>
+                </div>
+                <span class="dropdown-item-desc">Compramos lotes ociosos com pagamento à vista.</span>
+              </div>
+            </a>
+
+            <a href="produtos.html#retirada" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">recycling</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Retirada & Logística Reversa</span>
+                </div>
+                <span class="dropdown-item-desc">Coleta de paletes quebrados e pátio limpo.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="sobre.html" class="nav-link active" aria-current="page">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">info</span>
+          <span>Sobre Nós</span>
+        </a>
+
+        <a href="orcamento.html" class="nav-link">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">request_quote</span>
+          <span>Cotação Rápida</span>
+        </a>
+
+        <a href="gerador-orcamento.html" class="nav-link nav-link-special">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">description</span>
+          <span>Emitir Orçamento (B2B)</span>
+        </a>
       </nav>
 
       <div class="header-actions">
-        <a href="tel:+5511995979833" class="header-icon-btn" title="Ligar para consultor">
-          <span class="material-symbols-outlined" style="font-size: 1.25rem;">call</span>
+        <a href="tel:+5511995979833" class="header-phone-link" title="Ligar para consultor comercial">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary); font-size: 1.15rem;">call</span>
+          <span>(11) 99597-9833</span>
         </a>
-        <a href="gerador-orcamento.html" class="btn btn-primary header-btn-desktop">
-          <span class="material-symbols-outlined">description</span>
-          Emitir Orçamento
+
+        <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="btn btn-whatsapp header-icon-btn" title="Conversar no WhatsApp" aria-label="Abrir WhatsApp comercial">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
         </a>
+
+        <a href="orcamento.html" class="btn btn-primary">
+          <span class="material-symbols-outlined" aria-hidden="true">send</span>
+          <span>Cotar Agora</span>
+        </a>
+
+        <button class="header-icon-btn mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <!-- About Hero -->
-    <div style="text-align: center; max-width: 800px; margin: 2rem auto 3rem auto;">
-      <img src="assets/Logo_novo.png?v=2" alt="JJ Paletes" style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid var(--color-primary); margin: 0 auto 1.5rem auto; box-shadow: var(--shadow-md);">
-      <span class="section-tag">Nossa História</span>
+  <!-- Menu Gaveta Mobile -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Menu de Navegação Mobile">
+    <div class="mobile-nav-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <img src="assets/Logo_novo.png?v=2" alt="Logo" style="width: 32px; height: 32px; border-radius: 4px;">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: var(--color-dark);">JJ PALETES</span>
+        </div>
+        <button class="header-icon-btn" id="mobileMenuClose" aria-label="Fechar menu">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <a href="index.html" class="mobile-nav-link">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">home</span>
+          Início
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a href="produtos.html" class="mobile-nav-link">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">inventory_2</span>
+          Paletes & Serviços
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <div class="mobile-submenu-box">
+        <a href="produtos.html#pbr" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-primary);">view_in_ar</span>
+          <span>Palete PBR 1000x1200mm</span>
+        </a>
+        <a href="produtos.html#descartavel" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-primary);">flight_takeoff</span>
+          <span>Palete Descartável (One-Way)</span>
+        </a>
+        <a href="produtos.html#compra" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-success);">currency_exchange</span>
+          <span>Compra de Paletes Usados</span>
+        </a>
+        <a href="produtos.html#retirada" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-warning);">recycling</span>
+          <span>Retirada & Logística Reversa</span>
+        </a>
+      </div>
+
+      <a href="sobre.html" class="mobile-nav-link active" aria-current="page">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">info</span>
+          Sobre a JJ Paletes
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a href="orcamento.html" class="mobile-nav-link">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">request_quote</span>
+          Cotação Rápida
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a href="gerador-orcamento.html" class="mobile-nav-link" style="color: var(--color-primary); font-weight: 700; background: rgba(242, 101, 34, 0.08);">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">description</span>
+          Emissor B2B de Orçamentos
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </a>
+
+      <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 0.65rem;">
+        <p style="font-size: 0.78rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Canais Diretos de Vendas:</p>
+        <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="btn btn-whatsapp">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          Falar no WhatsApp Comercial
+        </a>
+        <a href="tel:+5511995979833" class="btn btn-outline">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          Ligar: (11) 99597-9833
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" id="main-content">
+    
+    <!-- Hero Sobre -->
+    <div style="text-align: center; max-width: 800px; margin: 2.5rem auto 3rem auto;">
+      <span class="section-tag">Nossa Trajetória</span>
       <h1 class="section-title">Sobre a JJ Comércio de Paletes</h1>
-      <p class="section-desc">Referência em soluções inteligentes de madeira para logística, armazenagem e transporte em Cabreúva, Jundiaí, Itu e todo o estado de São Paulo.</p>
+      <p class="section-desc">Referência em soluções de madeira para logística, armazenagem e transporte em Cabreúva, Jundiaí, Itu, Salto e todo o estado de São Paulo.</p>
     </div>
 
-    <!-- About Grid Details -->
+    <!-- Seção Institucional / História -->
     <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 4rem;">
       <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm);">
-        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1rem;">Compromisso com Eficiência e Sustentabilidade</h2>
-        <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
-          A <strong>JJ Comércio de Paletes</strong> nasceu com o objetivo de fornecer suporte logístico de alta performance para indústrias, comércios e centros de distribuição. Atuamos fortemente na cadeia de suprimentos oferecendo paletes padronizados PBR, descartáveis para exportação, além de serviços especializados de compra de lotes ociosos e logística reversa de madeira avariada.
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1.25rem;">
+          Compromisso com Agilidade, Segurança e Sustentabilidade
+        </h2>
+        <p style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+          A <strong>JJ Comércio de Paletes</strong> nasceu com o objetivo de fornecer suporte logístico de alta performance para indústrias, empresas comerciais e centros de distribuição. Atuamos fortemente na cadeia de suprimentos oferecendo paletes padronizados PBR, descartáveis para exportação, além de serviços especializados de compra de lotes ociosos e logística reversa de madeira.
         </p>
-        <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7;">
-          Nosso diferencial está na velocidade de resposta, frota própria para coleta e entrega rápida, e uma rigorosa inspeção de cada unidade para assegurar que suas cargas estejam sempre 100% protegidas.
+        <p style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.7;">
+          Nosso grande diferencial está na velocidade de resposta, frota própria para coleta e entrega rápida, e uma rigorosa inspeção técnica de cada unidade antes do despacho para assegurar que suas cargas estejam sempre 100% protegidas contra avarias.
         </p>
       </div>
     </div>
 
-    <!-- Pillars / Values -->
-    <div class="services-grid" style="margin-bottom: 4rem;">
+    <!-- Pilares de Valor -->
+    <div class="services-grid section-spacing">
       <div class="service-card">
         <div class="service-icon-box">
-          <span class="material-symbols-outlined">shield</span>
+          <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
         </div>
         <h3>Rigidez Estrutural</h3>
-        <p>Utilizamos madeira selecionada e tratada, garantindo resistência para estocagem em grandes alturas e transporte seguro.</p>
+        <p>Utilizamos apenas madeira selecionada e tratada, garantindo resistência para estocagem em grandes alturas em porta-paletes verticais.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon-box">
-          <span class="material-symbols-outlined">local_shipping</span>
+          <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
         </div>
-        <h3>Pontualidade na Entrega</h3>
-        <p>Logística ágil e posicionamento estratégico em Cabreúva, permitindo rápido atendimento ao polo industrial regional.</p>
+        <h3>Pontualidade & Frota</h3>
+        <p>Logística ágil e posicionamento estratégico em Cabreúva, permitindo rápido atendimento a todo o polo industrial regional.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon-box">
-          <span class="material-symbols-outlined">nature</span>
+          <span class="material-symbols-outlined" aria-hidden="true">eco</span>
         </div>
-        <h3>Consciência Ambiental</h3>
-        <p>Recuperação, reforma e descarte sustentável de paletes para diminuir o desperdício florestal e incentivar a economia circular.</p>
+        <h3>Economia Circular</h3>
+        <p>Recuperação, reforma e descarte ecológico de paletes para diminuir o desperdício florestal e incentivar a sustentabilidade na cadeia produtiva.</p>
       </div>
     </div>
 
-    <!-- Commercial Team -->
-    <section style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 3rem 2rem; margin-bottom: 4rem;">
-      <div class="section-header" style="margin-bottom: 2rem;">
-        <span class="section-tag">Equipe Comercial</span>
-        <h2 class="section-title">Fale Conosco Diretamente</h2>
-        <p class="section-desc">Nossa equipe está à disposição para visitas técnicas, contratos de fornecimento contínuo e cotações sob medida.</p>
+    <!-- Equipe Comercial e Atendimento Direto -->
+    <section style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 3rem 2rem; margin-bottom: 4rem; box-shadow: var(--shadow-sm);">
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-tag">Canais Diretos</span>
+        <h2 class="section-title">Nossa Equipe Comercial</h2>
+        <p class="section-desc">Estamos à disposição para visitas técnicas, contratos de fornecimento contínuo e cotações sob medida.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
         <!-- Roberto Gomes -->
-        <div style="background: var(--color-primary-light); border: 1px solid var(--color-primary-dim); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
-          <div style="width: 60px; height: 60px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-            <span class="material-symbols-outlined" style="font-size: 32px;">person</span>
+        <div style="background: var(--color-surface-container); border: 1px solid var(--color-primary-dim); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); color: #FFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 28px;">person</span>
           </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Roberto Gomes</h3>
-          <p style="color: var(--color-primary-dark); font-weight: 600; font-size: 0.85rem; margin-bottom: 1rem;">Consultor Comercial</p>
-          <a href="tel:+5511995979833" class="btn btn-outline" style="width: 100%; margin-bottom: 0.5rem; background: #fff;">
-            📞 (11) 99597-9833
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Roberto Gomes</h3>
+          <p style="color: var(--color-primary-dark); font-weight: 600; font-size: 0.88rem; margin-bottom: 1rem;">Consultor Comercial</p>
+          <a href="tel:+5511995979833" class="btn btn-primary" style="width: 100%; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+            <span>(11) 99597-9833</span>
           </a>
-          <a href="https://wa.me/5511995979833?text=Olá%20Roberto,%20vim%20pelo%20site%20da%20JJ%20Paletes." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
-            Chamar no WhatsApp
+          <a href="mailto:representante01jjpaletes@gmail.com" style="font-size: 0.82rem; color: var(--color-text-secondary); word-break: break-all;">
+            representante01jjpaletes@gmail.com
           </a>
         </div>
 
         <!-- José Charles -->
-        <div style="background: var(--color-surface-container); border: 1px solid var(--color-border-warm); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
-          <div style="width: 60px; height: 60px; background: var(--color-charcoal); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-            <span class="material-symbols-outlined" style="font-size: 32px;">person</span>
+        <div style="background: var(--color-surface-container); border: 1px solid var(--color-primary-dim); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); color: #FFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 28px;">person</span>
           </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">José Charles</h3>
-          <p style="color: var(--color-text-muted); font-weight: 600; font-size: 0.85rem; margin-bottom: 1rem;">Consultor Comercial</p>
-          <a href="tel:+5511959345927" class="btn btn-outline" style="width: 100%; margin-bottom: 0.5rem; background: #fff;">
-            📞 (11) 95934-5927
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">José Charles</h3>
+          <p style="color: var(--color-primary-dark); font-weight: 600; font-size: 0.88rem; margin-bottom: 1rem;">Consultor Comercial</p>
+          <a href="tel:+5511959345927" class="btn btn-primary" style="width: 100%; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+            <span>(11) 95934-5927</span>
           </a>
-          <a href="https://wa.me/5511959345927?text=Olá%20José%20Charles,%20vim%20pelo%20site%20da%20JJ%20Paletes." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
-            Chamar no WhatsApp
+          <a href="mailto:paletesjd@gmail.com" style="font-size: 0.82rem; color: var(--color-text-secondary); word-break: break-all;">
+            paletesjd@gmail.com
           </a>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5511995979833?text=Olá,%20gostaria%20de%20falar%20com%20a%20JJ%20Paletes." target="_blank" class="whatsapp-float" title="Falar no WhatsApp">
-    <span class="material-symbols-outlined">chat</span>
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pela%20página%20Sobre%20da%20JJ%20Paletes." target="_blank" class="whatsapp-fab" aria-label="Falar com consultor no WhatsApp">
+    <span class="material-symbols-outlined" aria-hidden="true">chat</span>
   </a>
 
-  <!-- Mobile Bottom Navigation -->
-  <nav class="mobile-bottom-nav">
-    <a href="index.html" class="mobile-nav-item">
-      <span class="material-symbols-outlined">home</span>
-      <span>Início</span>
-    </a>
-    <a href="produtos.html" class="mobile-nav-item">
-      <span class="material-symbols-outlined">inventory_2</span>
-      <span>Produtos</span>
-    </a>
-    <a href="sobre.html" class="mobile-nav-item active">
-      <span class="material-symbols-outlined">info</span>
-      <span>Sobre</span>
-    </a>
-    <a href="orcamento.html" class="mobile-nav-item">
-      <span class="material-symbols-outlined">request_quote</span>
-      <span>Orçamento</span>
-    </a>
-    <a href="https://wa.me/5511995979833" class="mobile-nav-item" style="color: var(--color-whatsapp);">
-      <span class="material-symbols-outlined">chat</span>
-      <span>WhatsApp</span>
-    </a>
-  </nav>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- Rodapé do Site -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <img src="assets/Logo_novo.png?v=2" alt="JJ Paletes Logotipo">
+            <span>JJ PALETES</span>
+          </div>
+          <p>
+            Soluções completas em paletes de madeira novos, seminovos e reformados com máxima resistência e agilidade de entrega.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Catálogo de Produtos</a></li>
+            <li><a href="sobre.html">Sobre a Empresa</a></li>
+            <li><a href="orcamento.html">Solicitar Orçamento</a></li>
+            <li><a href="gerador-orcamento.html">Emissor B2B de Orçamentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Modelos & Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="produtos.html#pbr">Palete PBR Padronizado</a></li>
+            <li><a href="produtos.html#descartavel">Palete Descartável (One-Way)</a></li>
+            <li><a href="orcamento.html?servico=compra">Vender Paletes Usados</a></li>
+            <li><a href="orcamento.html?servico=retirada">Retirada & Logística Reversa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento Comercial</h4>
+          <div class="footer-contact-item">
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            <div>
+              <strong>Roberto Gomes</strong><br>
+              <a href="tel:+5511995979833" style="color: #CBD5E1;">(11) 99597-9833</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            <div>
+              <strong>José Charles</strong><br>
+              <a href="tel:+5511959345927" style="color: #CBD5E1;">(11) 95934-5927</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+            <div>
+              <span>Cabreúva - SP | Atendimento Regional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 JJ Comércio de Paletes. Todos os direitos reservados. Cabreúva - SP.</p>
+        <div>
+          &copy; 2026 JJ Comércio de Paletes. Todos os direitos reservados.
+        </div>
+        <div style="color: #64748B;">
+          Design e Engenharia de Interface em conformidade WCAG 2.1 AA
+        </div>
       </div>
     </div>
   </footer>

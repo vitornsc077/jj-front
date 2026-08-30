@@ -3,130 +3,488 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JJ Comércio de Paletes | Soluções em Pallets em Cabreúva e Região</title>
-  <meta name="description" content="Venda, compra e reforma de paletes de madeira em Cabreúva, Jundiaí, Itu e região. Paletes PBR, descartáveis e sob medida com agilidade e os melhores preços.">
-  <meta name="keywords" content="paletes, pallets, palete PBR, compra de paletes, venda de paletes, Cabreúva, Jundiaí, pallets de madeira">
+  <title>JJ Comércio de Paletes | Venda, Compra e Reforma de Pallets em Cabreúva e Região</title>
+  <meta name="description" content="Especialistas em paletes de madeira novos, seminovos e reformados (PBR, descartáveis e sob medida) em Cabreúva, Jundiaí, Itu e região. Entrega rápida e compra de lotes ociosos.">
+  <meta name="keywords" content="paletes de madeira, paletes PBR, compra de paletes, venda de paletes, paletes Cabreúva, pallets Jundiaí, pallets Itu, reforma de paletes">
   
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="JJ Comércio de Paletes">
-  <meta property="og:description" content="Soluções inteligentes em pallets para empresas que buscam eficiência, economia e resultado.">
+  <meta property="og:title" content="JJ Comércio de Paletes | Soluções em Pallets">
+  <meta property="og:description" content="Paletes de madeira novos e reformados com máxima resistência, pontualidade e economia em Cabreúva e Região.">
   <meta property="og:image" content="assets/Logo_novo.png?v=2">
+  <meta property="og:type" content="website">
   
-  <link rel="icon" type="image/jpeg" href="assets/Logo_novo.png?v=2">
+  <link rel="icon" type="image/png" href="assets/Logo_novo.png?v=2">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Top Header / Navigation -->
-  <header class="site-header">
+  <!-- Barra Superior / Top Utility Bar -->
+  <div class="top-bar" role="region" aria-label="Informações Rápidas e Contato">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-badge">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          <span>Base em Cabreúva - SP • Atendimento em Jundiaí, Itu, Salto e todo o Estado de SP</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span style="font-size: 0.76rem; color: #94A3B8; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <span class="online-pulse-dot"></span> Atendimento Online
+        </span>
+        <a href="tel:+5511995979833" class="top-bar-link" title="Ligar para Roberto Gomes">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          <span>(11) 99597-9833</span>
+        </a>
+        <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="top-bar-link" style="color: #4ADE80;" title="WhatsApp Comercial">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: #4ADE80;">chat</span>
+          <span>WhatsApp Direto</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Barra de Navegação Principal -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
-        <img src="assets/Logo_novo.png?v=2" alt="Logo JJ Paletes">
-        <span>JJ PALETES</span>
+      <a href="index.html" class="brand-logo" aria-label="Página Inicial JJ Comércio de Paletes">
+        <img src="assets/Logo_novo.png?v=2" alt="Logotipo JJ Paletes">
+        <div class="brand-logo-text">
+          <span class="brand-name">JJ PALETES</span>
+          <span class="brand-sub">Comércio & Logística</span>
+        </div>
       </a>
 
-      <nav class="desktop-nav">
-        <a href="index.html" class="nav-link active">Início</a>
-        <a href="produtos.html" class="nav-link">Produtos</a>
-        <a href="sobre.html" class="nav-link">Sobre Nós</a>
-        <a href="orcamento.html" class="nav-link">Cotação Rápida</a>
-        <a href="gerador-orcamento.html" class="nav-link" style="color: var(--color-primary); font-weight: 700;">Emitir Orçamento (Sistema)</a>
+      <!-- Menu de Navegação Desktop com Submenu/Dropdown -->
+      <nav class="desktop-nav" role="navigation" aria-label="Navegação Principal">
+        <a href="index.html" class="nav-link active" aria-current="page">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">home</span>
+          <span>Início</span>
+        </a>
+
+        <!-- Dropdown: Nossos Paletes & Serviços -->
+        <div class="nav-dropdown">
+          <a href="produtos.html" class="nav-link nav-dropdown-toggle" id="dropdownPaletesLink" aria-haspopup="true" aria-expanded="false">
+            <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">inventory_2</span>
+            <span>Paletes & Serviços</span>
+            <span class="material-symbols-outlined dropdown-arrow" aria-hidden="true">expand_more</span>
+          </a>
+          
+          <div class="dropdown-menu" aria-labelledby="dropdownPaletesLink">
+            <a href="produtos.html#pbr" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">view_in_ar</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Palete PBR 1000x1200mm</span>
+                  <span class="dropdown-badge">Mais Vendido</span>
+                </div>
+                <span class="dropdown-item-desc">Padrão nacional regulamentado para porta-paletes.</span>
+              </div>
+            </a>
+
+            <a href="produtos.html#descartavel" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">flight_takeoff</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Palete Descartável (One-Way)</span>
+                </div>
+                <span class="dropdown-item-desc">Ideal para exportação e cargas de envio único.</span>
+              </div>
+            </a>
+
+            <a href="produtos.html#compra" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">currency_exchange</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Compra de Paletes Usados</span>
+                  <span class="dropdown-badge" style="background: var(--color-success);">Compramos</span>
+                </div>
+                <span class="dropdown-item-desc">Compramos lotes ociosos com pagamento à vista.</span>
+              </div>
+            </a>
+
+            <a href="produtos.html#retirada" class="dropdown-item">
+              <div class="dropdown-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">recycling</span>
+              </div>
+              <div class="dropdown-item-text">
+                <div class="dropdown-item-title">
+                  <span>Retirada & Logística Reversa</span>
+                </div>
+                <span class="dropdown-item-desc">Coleta de paletes quebrados e pátio limpo.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="sobre.html" class="nav-link">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">info</span>
+          <span>Sobre Nós</span>
+        </a>
+
+        <a href="orcamento.html" class="nav-link">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">request_quote</span>
+          <span>Cotação Rápida</span>
+        </a>
+
+        <a href="gerador-orcamento.html" class="nav-link nav-link-special">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;" aria-hidden="true">description</span>
+          <span>Emitir Orçamento (B2B)</span>
+        </a>
       </nav>
 
+      <!-- Ações do Header -->
       <div class="header-actions">
-        <a href="tel:+5511995979833" class="header-icon-btn" title="Ligar para consultor">
-          <span class="material-symbols-outlined" style="font-size: 1.25rem;">call</span>
+        <a href="tel:+5511995979833" class="header-phone-link" title="Ligar para consultor comercial">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary); font-size: 1.15rem;">call</span>
+          <span>(11) 99597-9833</span>
         </a>
-        <a href="gerador-orcamento.html" class="btn btn-primary header-btn-desktop">
-          <span class="material-symbols-outlined">description</span>
-          Emitir Orçamento
+
+        <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="btn btn-whatsapp header-icon-btn" title="Conversar no WhatsApp" aria-label="Abrir WhatsApp comercial">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
         </a>
+
+        <a href="orcamento.html" class="btn btn-primary">
+          <span class="material-symbols-outlined" aria-hidden="true">send</span>
+          <span>Cotar Agora</span>
+        </a>
+
+        <button class="header-icon-btn mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container">
-    
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <img src="assets/Logo_novo.png?v=2" alt="Logo JJ Paletes" class="hero-logo-badge">
-        <div class="hero-badge">
-          <span class="material-symbols-outlined" style="font-size: 16px;">verified</span>
-          Cabreúva e Região
+  <!-- Menu Gaveta Mobile Aprimorado -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Menu de Navegação Mobile">
+    <div class="mobile-nav-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <img src="assets/Logo_novo.png?v=2" alt="Logo" style="width: 32px; height: 32px; border-radius: 4px;">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: var(--color-dark);">JJ PALETES</span>
         </div>
-        <h1 class="hero-title">Soluções Inteligentes em Paletes</h1>
-        <p class="hero-subtitle">Atendemos indústrias, centros de distribuição e comércios com paletes novos e reformados com máxima resistência, pontualidade e economia.</p>
+        <button class="header-icon-btn" id="mobileMenuClose" aria-label="Fechar menu">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <a href="index.html" class="mobile-nav-link active" aria-current="page">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">home</span>
+          Início
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <!-- Submenu Mobile de Paletes -->
+      <a href="produtos.html" class="mobile-nav-link">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">inventory_2</span>
+          Paletes & Serviços
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <div class="mobile-submenu-box">
+        <a href="produtos.html#pbr" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-primary);">view_in_ar</span>
+          <span>Palete PBR 1000x1200mm</span>
+        </a>
+        <a href="produtos.html#descartavel" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-primary);">flight_takeoff</span>
+          <span>Palete Descartável (One-Way)</span>
+        </a>
+        <a href="produtos.html#compra" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-success);">currency_exchange</span>
+          <span>Compra de Paletes Usados</span>
+        </a>
+        <a href="produtos.html#retirada" class="mobile-sub-link">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px; color: var(--color-warning);">recycling</span>
+          <span>Retirada & Logística Reversa</span>
+        </a>
+      </div>
+
+      <a href="sobre.html" class="mobile-nav-link">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">info</span>
+          Sobre a JJ Paletes
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a href="orcamento.html" class="mobile-nav-link">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">request_quote</span>
+          Cotação Rápida
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a href="gerador-orcamento.html" class="mobile-nav-link" style="color: var(--color-primary); font-weight: 700; background: rgba(242, 101, 34, 0.08);">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-primary);">description</span>
+          Emissor B2B de Orçamentos
+        </span>
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </a>
+
+      <!-- Contatos Rápidos no Drawer -->
+      <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 0.65rem;">
+        <p style="font-size: 0.78rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Canais Diretos de Vendas:</p>
+        <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="btn btn-whatsapp">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          Falar no WhatsApp Comercial
+        </a>
+        <a href="tel:+5511995979833" class="btn btn-outline">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          Ligar: (11) 99597-9833
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main class="container" id="main-content">
+    
+    <!-- Hero Section (O Herói como Tese) -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-accent-glow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 16px;">verified</span>
+          <span>Atendimento Direto em Cabreúva, Jundiaí e Região</span>
+        </div>
+        
+        <h1 class="hero-title" id="hero-title">
+          Soluções de Alta Resistência em <span class="highlight">Paletes de Madeira</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Fornecimento ágil de paletes novos, seminovos e reformados para indústrias, centros de distribuição e transportadoras. Garantia de carga segura, compra de lotes ociosos e logística reversa eficiente.
+        </p>
+
         <div class="hero-cta-group">
           <a href="orcamento.html" class="btn btn-primary btn-lg">
-            Solicitar Orçamento
-            <span class="material-symbols-outlined">request_quote</span>
+            <span>Solicitar Cotação Imediata</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
           </a>
           <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20de%20paletes." target="_blank" class="btn btn-whatsapp btn-lg">
-            <span class="material-symbols-outlined">chat</span>
-            Falar no WhatsApp
+            <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+            <span>WhatsApp Comercial</span>
           </a>
+        </div>
+
+        <!-- Métricas & Prova de Capacidade -->
+        <div class="hero-stats-grid">
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">24h<span class="stat-accent">/48h</span></div>
+            <div class="hero-stat-label">Prazo Médio de Entrega</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">2.500<span class="stat-accent">kg</span></div>
+            <div class="hero-stat-label">Capacidade Padrão PBR</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">100<span class="stat-accent">%</span></div>
+            <div class="hero-stat-label">Madeira Selecionada & Tratada</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Bento Grid -->
-    <section class="mb-12">
+    <!-- Credibilidade & Diferenciais Técnicos -->
+    <section class="section-spacing" aria-label="Diferenciais JJ Paletes">
+      <div class="credibility-grid">
+        <div class="credibility-card">
+          <div class="credibility-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
+          </div>
+          <div class="credibility-text">
+            <h4>Frota Própria</h4>
+            <p>Entregas e coletas pontuais em galpões de todo o polo industrial paulista.</p>
+          </div>
+        </div>
+
+        <div class="credibility-card">
+          <div class="credibility-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">shield</span>
+          </div>
+          <div class="credibility-text">
+            <h4>Inspeção Rigorosa</h4>
+            <p>Estruturas revisadas e gabaritadas para suportar estocagem vertical.</p>
+          </div>
+        </div>
+
+        <div class="credibility-card">
+          <div class="credibility-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">payments</span>
+          </div>
+          <div class="credibility-text">
+            <h4>Compra com Pgto à Vista</h4>
+            <p>Avaliamos e compramos paletes usados liberando espaço no seu pátio.</p>
+          </div>
+        </div>
+
+        <div class="credibility-card">
+          <div class="credibility-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">recycling</span>
+          </div>
+          <div class="credibility-text">
+            <h4>Sustentabilidade Real</h4>
+            <p>Economia circular com reaproveitamento e destinação ecológica da madeira.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid de Serviços -->
+    <section class="section-spacing" aria-labelledby="services-title">
       <div class="section-header">
-        <span class="section-tag">Nossos Serviços</span>
-        <h2 class="section-title">Atendimento Completo em Paletes</h2>
-        <p class="section-desc">Garantimos o ciclo completo da madeira logística com qualidade, segurança e sustentabilidade.</p>
+        <span class="section-tag">Serviços Integrados</span>
+        <h2 class="section-title" id="services-title">Atendimento Completo em Madeira Logística</h2>
+        <p class="section-desc">Do fornecimento de unidades padronizadas até a gestão e compra de excedentes do seu galpão.</p>
       </div>
 
       <div class="services-grid">
         <!-- Venda -->
-        <div class="service-card">
+        <article class="service-card">
           <div class="service-icon-box">
-            <span class="material-symbols-outlined">inventory_2</span>
+            <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
           </div>
-          <h3>Venda de Paletes</h3>
-          <p>Paletes novos e seminovos em diversos padrões (PBR, Descartável, Europalete e sob medida). Estruturas revisadas e prontas para suportar sua carga.</p>
-          <a href="produtos.html" class="btn btn-outline" style="align-self: flex-start;">Ver Modelos</a>
-        </div>
+          <h3>Venda de Paletes Padronizados</h3>
+          <p>Paletes novos e seminovos no padrão PBR (1000x1200mm), descartáveis one-way para exportação e modelos sob medida para maquinários e cargas pesadas.</p>
+          <a href="produtos.html" class="service-link">
+            <span>Ver Modelos & Especificações</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
 
         <!-- Compra -->
-        <div class="service-card">
+        <article class="service-card">
           <div class="service-icon-box">
-            <span class="material-symbols-outlined">payments</span>
+            <span class="material-symbols-outlined" aria-hidden="true">currency_exchange</span>
           </div>
-          <h3>Compra de Usados</h3>
-          <p>Compramos seus paletes de madeira ociosos com excelente avaliação e pagamento à vista. Transforme ativos parados em fluxo de caixa.</p>
-          <a href="orcamento.html?servico=compra" class="btn btn-outline" style="align-self: flex-start;">Vender Paletes</a>
+          <h3>Compra de Paletes Usados</h3>
+          <p>Compramos seus paletes ociosos ou de medidas não utilizadas. Avaliação rápida, valorização justa do ativo e pagamento à vista com coleta agendada.</p>
+          <a href="orcamento.html?servico=compra" class="service-link">
+            <span>Solicitar Avaliação de Lote</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+
+        <!-- Reforma / Retirada -->
+        <article class="service-card">
+          <div class="service-icon-box">
+            <span class="material-symbols-outlined" aria-hidden="true">autorenew</span>
+          </div>
+          <h3>Logística Reversa & Descarte</h3>
+          <p>Retiramos paletes danificados e resíduos de madeira diretamente nas suas docas. Mantemos seu pátio desobstruído com destinação 100% responsável.</p>
+          <a href="orcamento.html?servico=retirada" class="service-link">
+            <span>Agendar Coleta de Resíduos</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Calculadora / Estimador Rápido de Paletes -->
+    <section class="pallet-calc-section" aria-labelledby="calc-title">
+      <div class="calc-grid">
+        <div>
+          <span class="section-tag">Simulador B2B</span>
+          <h2 class="section-title text-left" id="calc-title">Estime a Estrutura Ideal para Sua Carga</h2>
+          <p class="section-desc" style="margin-bottom: 1.5rem;">
+            Selecione o tipo de operação e a quantidade aproximada para calcular as especificações técnicas e enviar a cotação pronta no WhatsApp.
+          </p>
+          
+          <div class="calc-card">
+            <div class="calc-input-group">
+              <label for="calcPalletType">Tipo de Palete Desejado</label>
+              <select id="calcPalletType" class="form-select">
+                <option value="pbr" selected>Palete PBR (1000 x 1200 mm) - Padrão Nacional</option>
+                <option value="descartavel">Palete Descartável (One-Way) - Exportação</option>
+                <option value="europalete">Europalete (800 x 1200 mm) - Padrão Europeu</option>
+                <option value="compra_usados">Venda de Lote Usado (Quero Vender)</option>
+              </select>
+            </div>
+
+            <div class="calc-input-group">
+              <label for="calcQuantity">Quantidade Estimada (unidades)</label>
+              <input type="number" id="calcQuantity" class="form-input" min="10" max="5000" step="10" value="100">
+            </div>
+
+            <div class="calc-input-group">
+              <label for="calcGoal">Objetivo da Operação</label>
+              <select id="calcGoal" class="form-select">
+                <option value="compra" selected>Comprar Paletes para Armazenagem/Transporte</option>
+                <option value="venda">Vender Paletes Ociosos da Minha Empresa</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        <!-- Retirada / Reforma -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <span class="material-symbols-outlined">recycling</span>
+        <div>
+          <div class="calc-result-box">
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-primary); font-weight: 700;">
+              <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
+              <span>Especificação Recomendada</span>
+            </div>
+            
+            <div class="calc-result-row">
+              <span>Modelo Selecionado:</span>
+              <strong id="resPalletType">Palete PBR (1000x1200mm)</strong>
+            </div>
+
+            <div class="calc-result-row">
+              <span>Capacidade Estimada:</span>
+              <strong id="resLoadCapacity">Até 2.500 kg estático / 1.500 kg dinâmico</strong>
+            </div>
+
+            <div class="calc-result-row">
+              <span>Prazo Estimado de Atendimento:</span>
+              <strong id="resLeadTime">Entrega em 24h a 48h (Cabreúva e Região)</strong>
+            </div>
+
+            <div class="calc-result-row highlight">
+              <span>Status Comercial:</span>
+              <span>Pronta Entrega / Coleta Ágil</span>
+            </div>
           </div>
-          <h3>Retirada e Logística Reversa</h3>
-          <p>Retiramos paletes danificados diretamente no seu galpão com caminhão próprio. Destinação correta, pátio limpo e responsabilidade ecológica.</p>
-          <a href="orcamento.html?servico=retirada" class="btn btn-outline" style="align-self: flex-start;">Agendar Retirada</a>
+
+          <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <a href="#" id="btnCalcWhatsApp" target="_blank" class="btn btn-whatsapp btn-lg" style="width: 100%;">
+              <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+              <span>Cotar Esta Simulação no WhatsApp</span>
+            </a>
+            <a href="orcamento.html" class="btn btn-outline" style="width: 100%;">
+              <span>Preencher Formulário de Cotação Formal</span>
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Products Showcase Grid -->
-    <section class="mb-12" id="produtos">
+    <!-- Catálogo de Paletes Mais Solicitados -->
+    <section class="section-spacing" id="produtos" aria-labelledby="catalog-title">
       <div class="section-header">
-        <span class="section-tag">Catálogo</span>
-        <h2 class="section-title">Paletes Mais Solicitados</h2>
-        <p class="section-desc">Padrões estruturais prontos para entrega imediata em toda a região de Cabreúva, Jundiaí e Itu.</p>
+        <span class="section-tag">Modelos em Destaque</span>
+        <h2 class="section-title" id="catalog-title">Paletes Mais Solicitados por Indústrias</h2>
+        <p class="section-desc">Estruturas prontas para entrega imediata em Cabreúva, Jundiaí, Itu, Salto e todo o estado de SP.</p>
       </div>
 
       <div class="products-grid">
-        <!-- Product 1: PBR -->
+        <!-- PBR -->
         <article class="product-card">
           <div class="product-image-wrap">
-            <img src="assets/pallet1.jpg" alt="Palete PBR Padronizado">
+            <img src="assets/pallet1.jpg" alt="Palete PBR 1000x1200mm Padronizado" loading="lazy">
             <span class="product-tag">PADRÃO PBR</span>
           </div>
           <div class="product-body">
@@ -138,302 +496,165 @@
               <span class="spec-pill">4 Entradas</span>
             </div>
             <div class="product-actions">
-              <button class="btn btn-primary" data-product-key="pbr">
-                Detalhes & Cotação
+              <button class="btn btn-primary" data-product-key="pbr" aria-label="Ver detalhes e cotação do Palete PBR">
+                <span>Ver Detalhes</span>
               </button>
-              <a href="https://wa.me/5511995979833?text=Olá,%20tenho%20interesse%20no%20Palete%20PBR." target="_blank" class="btn btn-outline btn-icon" title="WhatsApp Rápido">
-                <span class="material-symbols-outlined" style="color: var(--color-whatsapp);">chat</span>
+              <a href="https://wa.me/5511995979833?text=Olá,%20tenho%20interesse%20no%20Palete%20PBR." target="_blank" class="btn btn-outline btn-icon" title="WhatsApp Rápido" aria-label="Cotar Palete PBR via WhatsApp">
+                <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-whatsapp);">chat</span>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Product 2: Descartável -->
+        <!-- Descartável One-Way -->
         <article class="product-card">
           <div class="product-image-wrap">
-            <img src="assets/pallet2.jpg" alt="Palete Descartável One-Way">
-            <span class="product-tag" style="background: #555555;">ONE-WAY</span>
+            <img src="assets/pallet2.jpg" alt="Palete Descartável One-Way" loading="lazy">
+            <span class="product-tag" style="background: rgba(30, 35, 43, 0.85);">ONE-WAY</span>
           </div>
           <div class="product-body">
             <h3 class="product-title">Palete Descartável (One-Way)</h3>
-            <p class="product-desc">Excelente custo-benefício para cargas sem retorno ou exportação. Estrutura leve e adaptável para transporte rodoviário e marítimo.</p>
+            <p class="product-desc">Ideal para exportação e entregas sem retorno do suporte. Excelente custo por unidade mantendo a rigidez e segurança da carga.</p>
             <div class="product-specs">
-              <span class="spec-pill">Custo Reduzido</span>
-              <span class="spec-pill">Sob Medida</span>
-              <span class="spec-pill">Exportação</span>
+              <span class="spec-pill">Custo Otimizado</span>
+              <span class="spec-pill">2 ou 4 Entradas</span>
+              <span class="spec-pill">Uso Único / Exportação</span>
             </div>
             <div class="product-actions">
-              <button class="btn btn-primary" data-product-key="descartavel">
-                Detalhes & Cotação
+              <button class="btn btn-primary" data-product-key="descartavel" aria-label="Ver detalhes do Palete Descartável">
+                <span>Ver Detalhes</span>
               </button>
-              <a href="https://wa.me/5511995979833?text=Olá,%20tenho%20interesse%20no%20Palete%20Descartável." target="_blank" class="btn btn-outline btn-icon" title="WhatsApp Rápido">
-                <span class="material-symbols-outlined" style="color: var(--color-whatsapp);">chat</span>
+              <a href="https://wa.me/5511995979833?text=Olá,%20tenho%20interesse%20no%20Palete%20Descartável." target="_blank" class="btn btn-outline btn-icon" title="WhatsApp Rápido" aria-label="Cotar Palete Descartável via WhatsApp">
+                <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-whatsapp);">chat</span>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Product 3: Compra de Lotes -->
+        <!-- Compra de Usados -->
         <article class="product-card">
           <div class="product-image-wrap">
-            <img src="assets/Compra.png" alt="Compra e Coleta de Paletes">
-            <span class="product-tag" style="background: #2e7d32;">COMPRA & COLETA</span>
+            <img src="assets/Compra.png" alt="Compra de Paletes Usados e Lotes" loading="lazy">
+            <span class="product-tag" style="background: rgba(22, 163, 74, 0.85);">COMPRAMOS SEU LOTE</span>
           </div>
           <div class="product-body">
-            <h3 class="product-title">Lotes de Paletes Usados</h3>
-            <p class="product-desc">Compramos e retiramos grandes e médios lotes de paletes usados. Pagamento à vista e agendamento de coleta rápida.</p>
+            <h3 class="product-title">Compra de Paletes Usados</h3>
+            <p class="product-desc">Tem paletes parados ocupando espaço no seu galpão? Avaliamos e compramos no local com pagamento à vista e coleta agendada.</p>
             <div class="product-specs">
-              <span class="spec-pill">Pagamento à Vista</span>
-              <span class="spec-pill">Coleta Própria</span>
-              <span class="spec-pill">Qualquer Quantidade</span>
+              <span class="spec-pill">Pagamento Imediato</span>
+              <span class="spec-pill">Coleta no Seu Galpão</span>
+              <span class="spec-pill">Avaliação Justa</span>
             </div>
             <div class="product-actions">
-              <button class="btn btn-primary" data-product-key="compra">
-                Detalhes & Cotação
+              <button class="btn btn-primary" data-product-key="compra" aria-label="Avaliar lote de paletes usados">
+                <span>Avaliar Meu Lote</span>
               </button>
-              <a href="https://wa.me/5511995979833?text=Olá,%20tenho%20paletes%20para%20vender." target="_blank" class="btn btn-outline btn-icon" title="WhatsApp Rápido">
-                <span class="material-symbols-outlined" style="color: var(--color-whatsapp);">chat</span>
+              <a href="https://wa.me/5511995979833?text=Olá,%20tenho%20paletes%20usados%20para%20vender." target="_blank" class="btn btn-outline btn-icon" title="WhatsApp Rápido" aria-label="Falar sobre venda de paletes no WhatsApp">
+                <span class="material-symbols-outlined" aria-hidden="true" style="color: var(--color-whatsapp);">chat</span>
               </a>
             </div>
           </div>
         </article>
       </div>
 
-      <div style="text-align: center;">
+      <div style="text-align: center; margin-top: 2.5rem;">
         <a href="produtos.html" class="btn btn-outline btn-lg">
-          Ver Todo o Catálogo
-          <span class="material-symbols-outlined">list_alt</span>
+          <span>Ver Catálogo Completo com Todos os Modelos</span>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
         </a>
-      </div>
-    </section>
-
-    <!-- Stats & Highlights -->
-    <section class="stats-strip">
-      <div class="stat-item">
-        <h3>+10k</h3>
-        <p>Paletes Movimentados/Mês</p>
-      </div>
-      <div class="stat-item">
-        <h3>100%</h3>
-        <p>Madeira Inspecionada</p>
-      </div>
-      <div class="stat-item">
-        <h3>24h</h3>
-        <p>Agilidade no Atendimento</p>
-      </div>
-      <div class="stat-item">
-        <h3>SP</h3>
-        <p>Cabreúva, Jundiaí e Região</p>
-      </div>
-    </section>
-
-    <!-- Fast Quote Section -->
-    <section class="quote-section" id="orcamento">
-      <div class="quote-accent-bar"></div>
-      <div class="quote-grid">
-        <!-- Sidebar -->
-        <div class="quote-sidebar">
-          <div class="quote-sidebar-header">
-            <span class="section-tag" style="color: #ffb599;">Atendimento Direto</span>
-            <h2>Fale com Nossos Especialistas</h2>
-            <p>Precisa de cotação imediata ou negociação de lote sob medida? Converse diretamente com nossos consultores comerciais.</p>
-          </div>
-
-          <div class="consultants-list">
-            <!-- Consultant 1 -->
-            <div class="consultant-item">
-              <div class="consultant-icon">
-                <span class="material-symbols-outlined">person</span>
-              </div>
-              <div class="consultant-info">
-                <h4>Roberto Gomes</h4>
-                <a href="tel:+5511995979833">📞 (11) 99597-9833</a>
-                <a href="mailto:representante01jjpaletes@gmail.com" class="email-link">✉️ representante01jjpaletes@gmail.com</a>
-              </div>
-            </div>
-
-            <!-- Consultant 2 -->
-            <div class="consultant-item">
-              <div class="consultant-icon">
-                <span class="material-symbols-outlined">person</span>
-              </div>
-              <div class="consultant-info">
-                <h4>José Charles</h4>
-                <a href="tel:+5511959345927">📞 (11) 95934-5927</a>
-                <a href="mailto:paletesjd@gmail.com" class="email-link">✉️ paletesjd@gmail.com</a>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <p style="font-size: 0.85rem; color: #888888;">📍 Base de Operações em Cabreúva - SP. Atendemos todo o interior e Grande São Paulo.</p>
-          </div>
-        </div>
-
-        <!-- Form -->
-        <div class="quote-form-wrap">
-          <h3 class="form-title">Solicitar Orçamento Online</h3>
-          <p class="form-subtitle">Preencha os dados e receba sua cotação diretamente no WhatsApp em poucos minutos.</p>
-
-          <form id="quoteForm">
-            <div class="form-group">
-              <label class="form-label" for="name">Seu Nome / Responsável *</label>
-              <div class="input-icon-wrap">
-                <span class="material-symbols-outlined">person</span>
-                <input type="text" id="name" class="form-control" placeholder="Ex: Carlos Silva" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="company">Nome da Empresa</label>
-                <div class="input-icon-wrap">
-                  <span class="material-symbols-outlined">business</span>
-                  <input type="text" id="company" class="form-control" placeholder="Ex: Transportadora LogSP">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="phone">Telefone / WhatsApp *</label>
-                <div class="input-icon-wrap">
-                  <span class="material-symbols-outlined">call</span>
-                  <input type="tel" id="phone" class="form-control" placeholder="(11) 99999-9999" required>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="palletType">Tipo de Palete / Serviço</label>
-                <div class="input-icon-wrap">
-                  <span class="material-symbols-outlined">inventory_2</span>
-                  <select id="palletType" class="form-control">
-                    <option value="Palete PBR (1000x1200mm)">Palete PBR (1000x1200mm)</option>
-                    <option value="Palete Descartável / One-Way">Palete Descartável / One-Way</option>
-                    <option value="Palete Sob Medida">Palete Sob Medida</option>
-                    <option value="Vender Paletes Usados">Quero Vender Paletes Usados</option>
-                    <option value="Retirada de Paletes Quebrados">Retirada de Paletes Quebrados</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="quantity">Quantidade Estimada</label>
-                <div class="input-icon-wrap">
-                  <span class="material-symbols-outlined">numbers</span>
-                  <input type="text" id="quantity" class="form-control" placeholder="Ex: 200 unidades / Lote">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="notes">Cidade / Observações</label>
-              <textarea id="notes" class="form-control" placeholder="Informe sua cidade de entrega (ex: Cabreúva, Jundiaí, Itu) ou requisitos específicos..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-              Enviar Cotação pelo WhatsApp
-              <span class="material-symbols-outlined">send</span>
-            </button>
-          </form>
-        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Product Details Modal -->
-  <div class="modal-backdrop" id="productModal">
-    <div class="modal-card">
-      <button class="modal-close" id="closeModalBtn">
-        <span class="material-symbols-outlined">close</span>
+  <!-- Modal de Detalhes do Produto (Acessível) -->
+  <div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-label="Detalhes Técnicos do Produto">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Fechar janela de detalhes">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
       </button>
       <div id="modalDetails"></div>
     </div>
   </div>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5511995979833?text=Olá,%20gostaria%20de%20um%20orçamento%20de%20paletes." target="_blank" class="whatsapp-float" title="Falar no WhatsApp">
-    <span class="material-symbols-outlined">chat</span>
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20da%20JJ%20Paletes%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="whatsapp-fab" aria-label="Falar com consultor no WhatsApp">
+    <span class="material-symbols-outlined" aria-hidden="true">chat</span>
   </a>
 
-  <!-- Mobile Bottom Navigation -->
-  <nav class="mobile-bottom-nav">
-    <a href="index.html" class="mobile-nav-item active">
-      <span class="material-symbols-outlined">home</span>
-      <span>Início</span>
-    </a>
-    <a href="produtos.html" class="mobile-nav-item">
-      <span class="material-symbols-outlined">inventory_2</span>
-      <span>Produtos</span>
-    </a>
-    <a href="sobre.html" class="mobile-nav-item">
-      <span class="material-symbols-outlined">info</span>
-      <span>Sobre</span>
-    </a>
-    <a href="orcamento.html" class="mobile-nav-item">
-      <span class="material-symbols-outlined">request_quote</span>
-      <span>Orçamento</span>
-    </a>
-    <a href="https://wa.me/5511995979833" class="mobile-nav-item" style="color: var(--color-whatsapp);">
-      <span class="material-symbols-outlined">chat</span>
-      <span>WhatsApp</span>
-    </a>
-  </nav>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- Rodapé do Site -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
+        <!-- Coluna 1: Marca -->
         <div class="footer-brand">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-            <img src="assets/Logo_novo.png?v=2" alt="JJ Paletes" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--color-primary);">
-            <h3 style="margin-bottom: 0;">JJ PALETES</h3>
+          <div class="footer-brand-logo">
+            <img src="assets/Logo_novo.png?v=2" alt="JJ Paletes Logotipo">
+            <span>JJ PALETES</span>
           </div>
-          <p>Comércio e reforma de paletes de madeira com alto padrão de qualidade, sustentabilidade e pontualidade na entrega para toda a região.</p>
+          <p>
+            Referência em fornecimento, reforma e logística de paletes de madeira em Cabreúva, Jundiaí, Itu, Salto e todo o estado de São Paulo.
+          </p>
         </div>
 
+        <!-- Coluna 2: Links Rápidos -->
         <div class="footer-col">
           <h4>Navegação</h4>
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
-            <li><a href="produtos.html">Nossos Produtos</a></li>
+            <li><a href="produtos.html">Catálogo de Produtos</a></li>
             <li><a href="sobre.html">Sobre a Empresa</a></li>
             <li><a href="orcamento.html">Solicitar Orçamento</a></li>
+            <li><a href="gerador-orcamento.html">Emissor B2B de Orçamentos</a></li>
           </ul>
         </div>
 
+        <!-- Coluna 3: Soluções -->
         <div class="footer-col">
-          <h4>Serviços</h4>
+          <h4>Modelos & Serviços</h4>
           <ul class="footer-links">
-            <li><a href="produtos.html#pbr">Palete PBR</a></li>
-            <li><a href="produtos.html#descartavel">Palete Descartável</a></li>
-            <li><a href="orcamento.html?servico=compra">Compra de Usados</a></li>
-            <li><a href="orcamento.html?servico=retirada">Retirada no Galpão</a></li>
+            <li><a href="produtos.html#pbr">Palete PBR Padronizado</a></li>
+            <li><a href="produtos.html#descartavel">Palete Descartável (One-Way)</a></li>
+            <li><a href="orcamento.html?servico=compra">Vender Paletes Usados</a></li>
+            <li><a href="orcamento.html?servico=retirada">Retirada & Logística Reversa</a></li>
           </ul>
         </div>
 
+        <!-- Coluna 4: Contato Comercial -->
         <div class="footer-col">
-          <h4>Contatos Comerciais</h4>
+          <h4>Atendimento Comercial</h4>
           <div class="footer-contact-item">
-            <span class="material-symbols-outlined">person</span>
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
             <div>
-              <strong>Roberto Gomes:</strong><br>
-              <a href="tel:+5511995979833">(11) 99597-9833</a><br>
-              <small>representante01jjpaletes@gmail.com</small>
+              <strong>Roberto Gomes</strong><br>
+              <a href="tel:+5511995979833" style="color: #CBD5E1;">(11) 99597-9833</a>
             </div>
           </div>
+
           <div class="footer-contact-item">
-            <span class="material-symbols-outlined">person</span>
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
             <div>
-              <strong>José Charles:</strong><br>
-              <a href="tel:+5511959345927">(11) 95934-5927</a><br>
-              <small>paletesjd@gmail.com</small>
+              <strong>José Charles</strong><br>
+              <a href="tel:+5511959345927" style="color: #CBD5E1;">(11) 95934-5927</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+            <div>
+              <span>Cabreúva - SP | Atendimento Regional</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 JJ Comércio de Paletes. Todos os direitos reservados. Cabreúva - SP.</p>
+        <div>
+          &copy; 2026 JJ Comércio de Paletes. Todos os direitos reservados.
+        </div>
+        <div style="color: #64748B;">
+          Design e Engenharia de Interface em conformidade WCAG 2.1 AA
+        </div>
       </div>
     </div>
   </footer>
