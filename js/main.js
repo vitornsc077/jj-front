@@ -70,6 +70,12 @@ function initMobileMenu() {
     if (e.target === drawer) closeDrawer();
   });
 
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && drawer.classList.contains('open')) {
       closeDrawer();
