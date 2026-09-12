@@ -1272,13 +1272,48 @@ main {
    ========================================================================== */
 
 /* Filtros de Categoria */
+.category-filter-scroll-wrap {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
 .category-filter-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .category-filter-scroll-wrap {
+    margin-left: -0.85rem;
+    margin-right: -0.85rem;
+    width: calc(100% + 1.7rem);
+    padding: 0 0.85rem;
+    overflow: hidden;
+  }
+  .category-filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    padding-bottom: 0.6rem;
+    padding-top: 0.2rem;
+    margin-bottom: 1rem;
+    scrollbar-width: none;
+  }
+  .category-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-pill {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
 }
 
 .filter-pill {
@@ -1556,6 +1591,53 @@ main {
   outline: none;
 }
 
+/* Chips de Ajuste Rápido de Quantidade (Calculadora) */
+.calc-quick-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.calc-chip-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.calc-chip {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.calc-chip:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-dim);
+  color: var(--color-primary-dark);
+}
+
+.calc-chip:active {
+  transform: scale(0.94);
+  background: var(--color-primary);
+  color: #FFFFFF !important;
+}
+
 .calc-result-box {
   background: var(--color-surface-container);
   border: 1px dashed var(--color-primary);
@@ -1568,6 +1650,17 @@ main {
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.calc-result-box.pulsing {
+  animation: resultPulse 0.4s ease-out;
+}
+
+@keyframes resultPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(242, 101, 34, 0.3); }
+  50% { transform: scale(1.015); box-shadow: 0 0 0 6px rgba(242, 101, 34, 0.15); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(242, 101, 34, 0); }
 }
 
 .calc-result-row {
@@ -1853,7 +1946,7 @@ main {
 }
 
 /* ==========================================================================
-   MODAL DE DETALHES DO PRODUTO (ACESSIBILIDADE)
+   MODAL DE DETALHES DO PRODUTO (ACESSIBILIDADE & BOTTOM SHEET MOBILE)
    ========================================================================== */
 
 .modal-backdrop {
@@ -1863,8 +1956,8 @@ main {
   right: 0;
   bottom: 0;
   background: rgba(17, 19, 21, 0.75);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 3000;
   display: flex;
   align-items: center;
@@ -1872,12 +1965,16 @@ main {
   padding: 0.75rem;
   opacity: 0;
   visibility: hidden;
-  transition: all var(--transition-normal);
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
 }
 
 .modal-backdrop.active {
   opacity: 1;
   visibility: visible;
+}
+
+.modal-drag-handle {
+  display: none;
 }
 
 .modal-container {
@@ -1890,11 +1987,42 @@ main {
   box-shadow: var(--shadow-xl);
   position: relative;
   transform: translateY(20px) scale(0.96);
-  transition: all var(--transition-normal);
+  transition: transform var(--transition-normal);
 }
 
 .modal-backdrop.active .modal-container {
   transform: translateY(0) scale(1);
+}
+
+/* Suporte a Bottom Sheet no Mobile (< 640px) */
+@media (max-width: 639px) {
+  .modal-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-container {
+    max-width: 100%;
+    width: 100%;
+    max-height: 85vh;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.35);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .modal-backdrop.active .modal-container {
+    transform: translateY(0);
+  }
+
+  .modal-drag-handle {
+    display: block;
+    width: 44px;
+    height: 5px;
+    border-radius: 999px;
+    background: #CBD5E1;
+    margin: 10px auto 4px auto;
+  }
 }
 
 .modal-close-btn {
@@ -2238,5 +2366,96 @@ main {
 @media (min-width: 768px) {
   .whatsapp-fab .material-symbols-outlined {
     font-size: 30px;
+  }
+}
+
+/* ==========================================================================
+   BARRA DE AÇÃO RÁPIDA MOBILE (THUMB ZONE CONVERSION BAR)
+   Exibida exclusivamente em dispositivos móveis (< 768px)
+   ========================================================================== */
+
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(62px + env(safe-area-inset-bottom, 0px));
+    padding: 0.4rem 0.75rem calc(0.4rem + env(safe-area-inset-bottom, 0px)) 0.75rem;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+    z-index: 1000;
+    gap: 0.5rem;
+  }
+
+  /* Compensa a altura da barra no rodapé de todas as páginas */
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Posiciona o FAB acima da barra móvel para evitar sobreposição */
+  .whatsapp-fab {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 1rem !important;
+  }
+
+  .mobile-bar-btn {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    height: 44px;
+    padding: 0 0.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-dark);
+  }
+
+  .mobile-bar-btn:active {
+    transform: scale(0.96);
+  }
+
+  .mobile-bar-btn .material-symbols-outlined {
+    font-size: 19px;
+  }
+
+  .mobile-bar-btn-whatsapp {
+    background: var(--color-whatsapp);
+    color: #FFFFFF !important;
+    border-color: var(--color-whatsapp);
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.28);
+  }
+
+  .mobile-bar-btn-whatsapp:active {
+    background: var(--color-whatsapp-hover);
+  }
+
+  .mobile-bar-btn-primary {
+    background: var(--color-primary);
+    color: #FFFFFF !important;
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(242, 101, 34, 0.28);
+  }
+
+  .mobile-bar-btn-primary:active {
+    background: var(--color-primary-hover);
   }
 }

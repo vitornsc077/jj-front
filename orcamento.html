@@ -290,24 +290,24 @@
             <div class="form-row-2">
               <div class="form-group">
                 <label class="form-label" for="name">Nome Completo / Responsável *</label>
-                <input type="text" id="name" class="form-input" placeholder="Ex: Carlos Silva" required>
+                <input type="text" id="name" class="form-input" placeholder="Ex: Carlos Silva" autocomplete="name" required>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="company">Nome da Empresa</label>
-                <input type="text" id="company" class="form-input" placeholder="Ex: Indústria ABC Logística">
+                <input type="text" id="company" class="form-input" placeholder="Ex: Indústria ABC Logística" autocomplete="organization">
               </div>
             </div>
 
             <div class="form-row-2">
               <div class="form-group">
                 <label class="form-label" for="phone">Telefone / WhatsApp com DDD *</label>
-                <input type="tel" id="phone" class="form-input" placeholder="Ex: (11) 99999-9999" required>
+                <input type="tel" id="phone" class="form-input" placeholder="Ex: (11) 99999-9999" autocomplete="tel" inputmode="tel" required>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="quantity">Quantidade Estimada</label>
-                <input type="text" id="quantity" class="form-input" placeholder="Ex: 100 unidades ou 1 carreta">
+                <input type="text" id="quantity" class="form-input" placeholder="Ex: 100 unidades ou 1 carreta" inputmode="numeric">
               </div>
             </div>
 
@@ -416,6 +416,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Barra de Ação Rápida Mobile (Thumb Zone) -->
+  <nav class="mobile-bottom-bar" aria-label="Ações Rápidas Mobile">
+    <a href="tel:+5511995979833" class="mobile-bar-btn" title="Ligar para Roberto Gomes">
+      <span class="material-symbols-outlined" aria-hidden="true">call</span>
+      <span>Ligar</span>
+    </a>
+    <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="mobile-bar-btn mobile-bar-btn-whatsapp" title="WhatsApp Comercial">
+      <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+      <span>WhatsApp</span>
+    </a>
+    <a href="orcamento.html" class="mobile-bar-btn mobile-bar-btn-primary" title="Solicitar Cotação">
+      <span class="material-symbols-outlined" aria-hidden="true">send</span>
+      <span>Cotar</span>
+    </a>
+  </nav>
 
   <script src="js/main.js?v=20260830_4"></script>
 </body>

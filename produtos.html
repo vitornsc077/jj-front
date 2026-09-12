@@ -236,12 +236,14 @@
       <p class="section-desc">Estruturas selecionadas, tratadas e revisadas de acordo com as normas técnicas para garantir a máxima segurança na movimentação e estocagem das suas mercadorias.</p>
     </div>
 
-    <!-- Barra de Filtros de Categoria -->
-    <div class="category-filter-bar" role="tablist" aria-label="Filtrar produtos por categoria">
-      <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">Todos os Modelos</button>
-      <button class="filter-pill" data-filter="pbr" role="tab" aria-selected="false">Padrão PBR</button>
-      <button class="filter-pill" data-filter="descartavel" role="tab" aria-selected="false">Descartáveis (One-Way)</button>
-      <button class="filter-pill" data-filter="servicos" role="tab" aria-selected="false">Compra de Usados & Serviços</button>
+    <!-- Barra de Filtros de Categoria (Deslizável no Celular) -->
+    <div class="category-filter-scroll-wrap">
+      <div class="category-filter-bar" role="tablist" aria-label="Filtrar produtos por categoria">
+        <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">Todos os Modelos</button>
+        <button class="filter-pill" data-filter="pbr" role="tab" aria-selected="false">Padrão PBR</button>
+        <button class="filter-pill" data-filter="descartavel" role="tab" aria-selected="false">Descartáveis (One-Way)</button>
+        <button class="filter-pill" data-filter="servicos" role="tab" aria-selected="false">Compra de Usados & Serviços</button>
+      </div>
     </div>
 
     <!-- Grid de Produtos e Serviços -->
@@ -453,6 +455,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Barra de Ação Rápida Mobile (Thumb Zone) -->
+  <nav class="mobile-bottom-bar" aria-label="Ações Rápidas Mobile">
+    <a href="tel:+5511995979833" class="mobile-bar-btn" title="Ligar para Roberto Gomes">
+      <span class="material-symbols-outlined" aria-hidden="true">call</span>
+      <span>Ligar</span>
+    </a>
+    <a href="https://wa.me/5511995979833?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="mobile-bar-btn mobile-bar-btn-whatsapp" title="WhatsApp Comercial">
+      <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+      <span>WhatsApp</span>
+    </a>
+    <a href="orcamento.html" class="mobile-bar-btn mobile-bar-btn-primary" title="Solicitar Cotação">
+      <span class="material-symbols-outlined" aria-hidden="true">send</span>
+      <span>Cotar</span>
+    </a>
+  </nav>
 
   <script src="js/main.js?v=20260830_4"></script>
 </body>

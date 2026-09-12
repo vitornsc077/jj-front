@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuoteForm();
   initUrlParamsPreFill();
   initSmoothScroll();
+  initPhoneMask();
 });
 
 /* ==========================================================================
@@ -45,12 +46,14 @@ function initMobileMenu() {
     drawer.classList.add('open');
     document.body.style.overflow = 'hidden';
     toggleBtn.setAttribute('aria-expanded', 'true');
+    if (closeBtn) closeBtn.focus();
   };
 
   const closeDrawer = () => {
     drawer.classList.remove('open');
     document.body.style.overflow = '';
     toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.focus();
   };
 
   toggleBtn.addEventListener('click', (e) => {
@@ -76,10 +79,26 @@ function initMobileMenu() {
     });
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+  // Focus Trap para Navegação Acessível no Menu Mobile (WCAG 2.1 AA)
+  drawer.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
       closeDrawer();
-      toggleBtn.focus();
+      return;
+    }
+
+    if (e.key === 'Tab') {
+      const focusables = drawer.querySelectorAll('a, button, input, [tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 }
@@ -172,6 +191,23 @@ function initPalletCalculator() {
   calcQuantity.addEventListener('input', updateCalculation);
   if (calcGoal) calcGoal.addEventListener('change', updateCalculation);
 
+  // Chips de Ajuste Rápido de Quantidade (+50, +100, +250, +500)
+  document.querySelectorAll('.calc-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const qty = chip.getAttribute('data-qty');
+      if (qty) {
+        calcQuantity.value = qty;
+        updateCalculation();
+        const resBox = document.querySelector('.calc-result-box');
+        if (resBox) {
+          resBox.classList.remove('pulsing');
+          void resBox.offsetWidth; // Dispara reflow do DOM para reiniciar animação
+          resBox.classList.add('pulsing');
+        }
+      }
+    });
+  });
+
   updateCalculation();
 }
 
@@ -248,6 +284,7 @@ function initProductModals() {
     lastActiveTrigger = triggerElement;
 
     modalDetails.innerHTML = `
+      <div class="modal-drag-handle" aria-hidden="true"></div>
       <img src="${item.image}" alt="${item.title}" class="modal-header-image">
       <div class="modal-body">
         <span class="section-tag" style="margin-bottom: 0.5rem;">${item.tag}</span>
@@ -345,6 +382,17 @@ function initQuoteForm() {
       return;
     }
 
+    // Feedback visual imediato no botão de envio
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="material-symbols-outlined" style="animation: spin 1s infinite linear;" aria-hidden="true">sync</span>
+        <span>Abrindo WhatsApp Comercial...</span>
+      `;
+    }
+
     // Monta a mensagem para o WhatsApp com formatação legível
     const message = `*SOLICITAÇÃO DE ORÇAMENTO - JJ PALETES*%0A%0A` +
       `👤 *Nome:* ${encodeURIComponent(name)}%0A` +
@@ -362,7 +410,11 @@ function initQuoteForm() {
     setTimeout(() => {
       window.open(whatsappUrl, '_blank');
       form.reset();
-    }, 1000);
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    }, 850);
   });
 }
 
@@ -420,4 +472,31 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 4000);
+}
+
+/* ==========================================================================
+   MÁSCARA DE TELEFONE CELULAR BRASILEIRO (XX) XXXXX-XXXX
+   ========================================================================== */
+
+function initPhoneMask() {
+  const phoneInputs = document.querySelectorAll('input[type="tel"], #phone');
+  phoneInputs.forEach(input => {
+    input.addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+
+      if (v.length > 10) {
+        // (11) 99999-9999
+        v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+      } else if (v.length > 6) {
+        // (11) 9999-9999
+        v = `(${v.slice(0, 2)}) ${v.slice(2, 6)}-${v.slice(6)}`;
+      } else if (v.length > 2) {
+        v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+      } else if (v.length > 0) {
+        v = `(${v}`;
+      }
+      e.target.value = v;
+    });
+  });
 }
